@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
+}
+
+#dynamicTitle {
+    position: relative;
+    top: 30%; /* Position 50% from the top */
+    transform: translateY(-50%); /* Adjust vertically to center based on its own height */
+    font-size: 8em; /* Adjust size as needed */
+    border-right: 2px solid black; /* Simulate cursor */
+    animation: blinkCursor 0.75s step-end infinite;
+    font-family: 'Honk', sans-serif;
+                                                
+    white-space: nowrap; /* Prevent the title from wrapping */
+}
+
+@keyframes blinkCursor {
+    from {border-right-color: transparent;}
+    to {border-right-color: black;}
+}
